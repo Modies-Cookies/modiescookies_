@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pure Matcha Cookies</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f6f9f4;
+    color: #2e3a23;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #6a994e, #a7c957);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(106, 153, 78, 0.4);
+  }
+
+  header h1 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  header p {
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .intro {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #496d2f;
+  }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .product-card {
+    background: #e6f0d4;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(131, 153, 86, 0.3);
+    width: 280px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(106, 153, 78, 0.6);
+  }
+
+  .product-img img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    user-select: none;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3a5520;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .product-desc {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #576b2f;
+    line-height: 1.4;
+  }
+
+  .highlight {
+    font-weight: 600;
+    color: #a7c957;
+  }
+
+  section.features {
+    margin-top: 4rem;
+    background: #d8e7b5;
+    padding: 2.5rem 1rem;
+    border-radius: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 20px rgba(131, 153, 86, 0.25);
+  }
+
+  section.features h2 {
+    text-align: center;
+    color: #3a5520;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  section.features ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    color: #43592b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  section.features ul li {
+    margin-bottom: 0.8rem;
+  }
+
+  section.payment {
+    margin-top: 4rem;
+    background: #a7c957;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 20px rgba(106, 153, 78, 0.35);
+    color: #fff;
+    font-weight: 400;
+  }
+
+  section.payment h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  section.payment ul {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  section.payment ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255 255 255 / 0.3);
+    padding-bottom: 6px;
+  }
+
+  section.payment ul li span.label {
+    font-weight: 600;
+  }
+
+  footer {
+    background: #6a994e;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(106, 153, 78, 0.4);
+  }
+
+  footer a {
+    color: #d6e570;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 650px) {
+    .products {
+      flex-direction: column;
+      align-items: center;
+    }
+    section.payment ul li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    section.payment ul li span {
+      margin-top: 4px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pure Matcha Cookies</h1>
+  <p>Gluten-Free, Premium Quality, Bursting with Pure Matcha & Chocolate Flavors</p>
+</header>
+<main>
+  <p class="intro">
+    Indulge in our exquisite gluten-free cookies crafted with the finest raw materials.
+    Choose from our signature <span class="highlight">Pure Matcha</span> flavor or the rich, delightful <span class="highlight">Chocolate Matcha</span> variety. Each cookie delivers premium taste and pure delight.
+  </p>
+ <div class="products">
+  <div class="product-card">
+    <div class="product-img">
+      <img src="choco-matcha.jpg" alt="Pure Matcha Cookie" />
+    </div>
+    <h3 class="product-title">Pure Matcha Cookie</h3>
+    <p class="product-desc">
+      Experience the authentic taste of premium Japanese matcha powder in every bite. 
+      Gluten-free and lovingly baked for the perfect balance of flavor and texture.
+    </p>
+  </div>
+  <div class="product-card">
+    <div class="product-img">
+      <img src="pure-matcha.jpg" alt="Chocolate Matcha Cookie" />
+    </div>
+    <h3 class="product-title">Chocolate Matcha Cookie</h3>
+    <p class="product-desc">
+      A decadent fusion of rich chocolate and earthy matcha. Our gluten-free chocolate matcha cookie blends premium flavors for an irresistible treat.
+    </p>
+  </div>
+</div>
+
+  <section class="features">
+    <h2>Why Choose Our Cookies?</h2>
+    <ul>
+      <li><strong>100% Gluten-Free:</strong> Safe and delicious for gluten-sensitive customers.</li>
+      <li><strong>Premium Raw Materials:</strong> Only top-grade matcha and quality ingredients are used.</li>
+      <li><strong>Artisanal Baking:</strong> Handcrafted with care for the perfect texture and taste.</li>
+      <li><strong>Freshly Made:</strong> Baked fresh to ensure maximum flavor and aroma.</li>
+    </ul>
+  </section>
+
+  <section class="payment">
+    <h2>Payment Methods</h2>
+    <ul>
+      <li><span class="label">Bank Account (BCA - Blu):</span> 0071959522</li>
+      <li><span class="label">Phone Number (Shopee, OVO, GoPay):</span> 0889 9650 5929</li>
+      <li><span class="label">Cash on Delivery (COD):</span> Available</li>
+    </ul>
+  </section>
+</main>
+<footer>
+  &copy; 2025 MODIES. All rights reserved. Contact us at <a href="mailto:0889-9650-5929">0889-9650-5929</a>
+</footer>
+</body>
+</html>
